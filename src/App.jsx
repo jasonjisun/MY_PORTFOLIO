@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 // Components
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer"; // <-- import Footer
 import Home from "./sections/Home";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
@@ -35,6 +36,9 @@ export default function App() {
       <Element name="contact">
         <Contact />
       </Element>
+
+      {/* Footer added here */}
+      <Footer />
     </div>
   );
 }
