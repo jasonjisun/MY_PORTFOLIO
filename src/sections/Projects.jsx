@@ -8,7 +8,7 @@ const placeholderImage = "https://via.placeholder.com/600x400?text=Coming+Soon";
 
 const projects = [
   {
-    title: "LWF Hospital Appointment and Queieing System",
+    title: "LWF Hospital Appointment and Queuing System",
     description: `Developed a full-stack web application to streamline hospital appointment scheduling, EMR management, and real-time queueing. Implemented secure authentication (JWT and Google OAuth), role-based dashboards for Admin, Doctor, and Patient, automated email notifications, and session-based queue management. Built scalable RESTful APIs with real-time updates using cron jobs and contextual state management.`,
     image: project1Image,
     github: "https://github.com/jasonjisun/LWF-API/tree/revised-version",

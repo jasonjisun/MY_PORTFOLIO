@@ -29,7 +29,7 @@ export default function Contact() {
     setStatusMessage("Sending your message...");
 
     try {
-      const res = await fetch("/api/send-email", {
+      const res = await fetch("/.netlify/functions/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -83,7 +83,11 @@ export default function Contact() {
             key={field}
             type={field === "email" ? "email" : "text"}
             name={field}
-            placeholder={field === "name" ? "Your Name" : field.charAt(0).toUpperCase() + field.slice(1)}
+            placeholder={
+              field === "name"
+                ? "Your Name"
+                : field.charAt(0).toUpperCase() + field.slice(1)
+            }
             value={formData[field]}
             onChange={handleChange}
             className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:border-white disabled:opacity-60"
@@ -107,7 +111,11 @@ export default function Contact() {
           type="submit"
           disabled={isSubmitting || isSuccess}
           className={`w-full flex items-center justify-center gap-2 py-3 rounded-lg font-semibold transition
-            ${isSubmitting ? "bg-zinc-700 cursor-not-allowed animate-pulse" : "bg-white text-black hover:scale-105"}
+            ${
+              isSubmitting
+                ? "bg-zinc-700 cursor-not-allowed animate-pulse"
+                : "bg-white text-black hover:scale-105"
+            }
           `}
         >
           <AnimatePresence initial={false}>
