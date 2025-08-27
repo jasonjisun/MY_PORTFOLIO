@@ -29,7 +29,7 @@ export default function Contact() {
     setStatusMessage("Sending your message...");
 
     try {
-      const res = await fetch("/.netlify/functions/send-email", {
+      const res = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
