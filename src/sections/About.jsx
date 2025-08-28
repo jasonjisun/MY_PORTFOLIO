@@ -5,7 +5,13 @@ import ProfileCard from "@/components/ProfileCard";
 import aboutPicFront from "@/assets/images/aboutPic.jpg";
 import aboutPicBack from "@/assets/images/aboutPic2.jpg";
 import { RiShakeHandsFill } from "react-icons/ri";
-import { FaLinkedin, FaInstagram, FaGithub, FaSpotify, FaDiscord } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaGithub,
+  FaSpotify,
+  FaDiscord,
+} from "react-icons/fa";
 
 export default function About() {
   const [showSocials, setShowSocials] = useState(false);
@@ -48,10 +54,10 @@ export default function About() {
         <p className="text-gray-400 leading-relaxed text-lg">
           My focus is on{" "}
           <span className="text-white font-medium">
-            JavaScript and modern web frameworks
+            backend development, system design, and scalable architectures
           </span>
-          , but I'm always eager to learn new tools and expand my horizons in
-          the world of software development.
+          , but I'm always eager to explore new tools and approaches to expand
+          my horizons in the world of software engineering.
         </p>
 
         {/* Connect Button + Social Links */}
@@ -62,7 +68,9 @@ export default function About() {
             whileHover={{ rotate: [0, -10, 10, -10, 0] }}
             transition={{ duration: 0.5 }}
           >
-            <span></span><RiShakeHandsFill />Connect with me
+            <span></span>
+            <RiShakeHandsFill />
+            Connect with me
           </motion.button>
 
           {/* Fixed height container so layout doesn’t shift */}
