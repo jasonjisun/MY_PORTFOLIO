@@ -110,7 +110,7 @@ export default function Contact() {
         <motion.button
           type="submit"
           disabled={isSubmitting || isSuccess}
-          className={`w-full flex items-center justify-center gap-2 py-3 rounded-lg font-semibold transition
+          className={`w-full flex items-center justify-center gap-2 py-3 rounded-lg font-semibold transition cursor-pointer
             ${
               isSubmitting
                 ? "bg-zinc-700 cursor-not-allowed animate-pulse"

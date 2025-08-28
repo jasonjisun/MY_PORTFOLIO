@@ -4,26 +4,12 @@ import { FaGithub, FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 import { SectionTitle } from "@/components/SectionTitle";
 import project1Image from "@/assets/images/project1.png";
 
-const placeholderImage = "https://via.placeholder.com/600x400?text=Coming+Soon";
-
 const projects = [
   {
     title: "LWF Hospital Appointment and Queuing System",
     description: `Developed a full-stack web application to streamline hospital appointment scheduling, EMR management, and real-time queueing. Implemented secure authentication (JWT and Google OAuth), role-based dashboards for Admin, Doctor, and Patient, automated email notifications, and session-based queue management. Built scalable RESTful APIs with real-time updates using cron jobs and contextual state management.`,
     image: project1Image,
     github: "https://github.com/jasonjisun/LWF-API/tree/revised-version",
-  },
-  {
-    title: "Coming Soon",
-    description: "This project will be added soon.",
-    image: placeholderImage,
-    github: "#",
-  },
-  {
-    title: "Coming Soon",
-    description: "This project will be added soon.",
-    image: placeholderImage,
-    github: "#",
   },
 ];
 
@@ -89,13 +75,13 @@ export default function Projects() {
         {/* Navigation Buttons */}
         <button
           onClick={prevProject}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/10 p-3 rounded-full hover:bg-white/20 transition"
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/10 p-3 rounded-full hover:bg-white/20 transition cursor-pointer"
         >
           <FaArrowLeft />
         </button>
         <button
           onClick={nextProject}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/10 p-3 rounded-full hover:bg-white/20 transition"
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/10 p-3 rounded-full hover:bg-white/20 transition cursor-pointer"
         >
           <FaArrowRight />
         </button>

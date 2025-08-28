@@ -69,7 +69,12 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           And I'm a Software{" "}
-          <ReactTyped strings={["Developer", "Engineer"]} typeSpeed={60} backSpeed={40} loop />
+          <ReactTyped
+            strings={["Developer", "Engineer"]}
+            typeSpeed={60}
+            backSpeed={40}
+            loop
+          />
         </motion.div>
 
         {/* Buttons */}
@@ -84,8 +89,12 @@ export default function Home() {
 
           <ScrollLink to="project" smooth duration={600} offset={-140}>
             <motion.button
-              className="px-6 py-3 rounded-full bg-white text-black font-medium border border-white"
-              whileHover={{ backgroundColor: "#000000", color: "#ffffff", transition: { duration: 0.3 } }}
+              className="px-6 py-3 rounded-full bg-white text-black font-medium border border-white cursor-pointer"
+              whileHover={{
+                backgroundColor: "#37353E",
+                color: "#ffffff",
+                transition: { duration: 0.3 },
+              }}
             >
               <AnimatedText text="View Projects" />
             </motion.button>
@@ -96,7 +105,9 @@ export default function Home() {
         <motion.div
           className="mt-6 w-48 rounded-lg shadow-lg overflow-hidden"
           initial={{ opacity: 0, y: 20 }}
-          animate={isHoveringResume ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={
+            isHoveringResume ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+          }
           transition={{ duration: 0.4 }}
         >
           <img src={resumeImage} alt="Resume Preview" className="w-full" />

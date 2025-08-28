@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
 import { SectionTitle } from "@/components/SectionTitle";
+import { RiNextjsFill } from "react-icons/ri";
 import { FaJs, FaReact, FaNode, FaPhp, FaPython, FaJava, FaGitAlt, FaFigma, FaAndroid, FaHtml5, FaCss3Alt, FaGithub, FaCode } from "react-icons/fa";
-import { SiTailwindcss, SiBootstrap, SiMongodb, SiMysql, SiPostgresql, SiXampp, SiPostman, SiInsomnia, SiCanva, SiRender, SiVercel, SiNetlify, SiWix, SiWordpress, SiOdoo } from "react-icons/si";
+import { SiTypescript, SiExpress, SiTailwindcss, SiBootstrap, SiMongodb, SiMysql, SiPostgresql, SiXampp, SiPostman, SiInsomnia, SiCanva, SiRender, SiVercel, SiNetlify, SiWix, SiWordpress, SiOdoo } from "react-icons/si";
 
 const skills = [
   {
     title: "Languages & Frameworks",
     items: [
       { name: "JavaScript", icon: <FaJs />, color: "#F7DF1E" },
+      { name: "TypeScript", icon: <SiTypescript />, color: "#1572B6" },
+      { name: "Next.js", icon: <RiNextjsFill />, color: "#000000" },
       { name: "Node.js", icon: <FaNode />, color: "#339933" },
-      { name: "Express.js", icon: <FaNode />, color: "#339933" },
+      { name: "Express.js", icon: <SiExpress />, color: "#1572B6" },
       { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
       { name: "PHP", icon: <FaPhp />, color: "#777BB4" },
       { name: "Python", icon: <FaPython />, color: "#3776AB" },
@@ -47,13 +50,7 @@ const skills = [
       { name: "Canva", icon: <SiCanva />, color: "#00C4CC" },
     ],
   },
-  {
-    title: "API Development",
-    items: [
-      { name: "RESTful APIs", icon: <FaCode />, color: "#61DAFB" },
-      { name: "Mongoose ORM", icon: <SiMongodb />, color: "#47A248" },
-    ],
-  },
+  
   {
     title: "Deployment",
     items: [

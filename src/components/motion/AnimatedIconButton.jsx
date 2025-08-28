@@ -2,7 +2,13 @@ import { motion } from "framer-motion";
 import AnimatedText from "./AnimatedText";
 import { RiArrowDownDoubleFill } from "react-icons/ri";
 
-export default function AnimatedIconButton({ text, href, download, isHovering, setIsHovering }) {
+export default function AnimatedIconButton({
+  text,
+  href,
+  download,
+  isHovering,
+  setIsHovering,
+}) {
   return (
     <motion.a
       href={href}
@@ -11,7 +17,7 @@ export default function AnimatedIconButton({ text, href, download, isHovering, s
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       whileHover={{
-        backgroundColor: "#ffffff",
+        backgroundColor: "#44444E",
         color: "#000000",
         transition: { duration: 0.3 },
       }}
@@ -19,7 +25,9 @@ export default function AnimatedIconButton({ text, href, download, isHovering, s
       <motion.span
         className="w-5 h-5 flex items-center justify-center"
         animate={isHovering ? { y: [0, 6, 0] } : { y: 0 }}
-        transition={isHovering ? { duration: 0.6, repeat: Infinity } : { duration: 0 }}
+        transition={
+          isHovering ? { duration: 0.6, repeat: Infinity } : { duration: 0 }
+        }
       >
         <RiArrowDownDoubleFill />
       </motion.span>
